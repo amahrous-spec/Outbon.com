@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easiplus - Manage Your On-Site Workforce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#004488',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-deep-blue rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-lg">E</span>
+                    </div>
+                    <span class="text-2xl font-bold text-deep-blue">Easiplus</span>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="nav-link text-gray-600 hover:text-deep-blue transition-colors" data-key="nav_features">Features</a>
+                    <a href="#pricing" class="nav-link text-gray-600 hover:text-deep-blue transition-colors" data-key="nav_pricing">Pricing</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-deep-blue transition-colors" data-key="nav_contact">Contact</a>
+                </nav>
+
+                <!-- Language Toggle -->
+                <button id="langToggle" class="bg-deep-blue text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-medium">
+                    عربي
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#features" class="block py-2 text-gray-600 hover:text-deep-blue" data-key="nav_features">Features</a>
+                <a href="#pricing" class="block py-2 text-gray-600 hover:text-deep-blue" data-key="nav_pricing">Pricing</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-deep-blue" data-key="nav_contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-deep-blue to-blue-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-key="hero_headline">
+                    Manage Your On-Site Workforce, Simply.
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto" data-key="hero_subtitle">
+                    The B2B platform built for construction and service managers who demand real-time accountability and efficiency.
+                </p>
+                <button class="bg-white text-deep-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg" data-key="hero_cta">
+                    Request a Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-key="features_title">
+                    Powerful Features for Modern Workforce Management
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-deep-blue rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-key="feature1_title">
+                        Real-Time GPS Time Clock
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-key="feature1_text">
+                        Workers check in and out from verified site locations, eliminating time theft and manual log errors.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-deep-blue rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-key="feature2_title">
+                        Task Dispatch & Tracking
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-key="feature2_text">
+                        Assign, track, and verify completion of daily tasks directly to your on-site team's mobile devices.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-deep-blue rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-key="feature3_title">
+                        Safety & Compliance Logs
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-key="feature3_text">
+                        Automated digital forms for site safety checklists, incident reporting, and mandatory compliance documentation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-key="pricing_title">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600" data-key="pricing_subtitle">
+                    Choose the plan that fits your team size
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-key="plan_starter">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-deep-blue">$29</span>
+                        <span class="text-gray-600" data-key="per_user_month">/user/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_gps_tracking">GPS Time Tracking</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_task_management">Task Management</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_basic_reports">Basic Reports</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors" data-key="get_started">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-deep-blue text-white p-8 rounded-xl shadow-md relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold" data-key="most_popular">
+                            Most Popular
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-key="plan_professional">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$49</span>
+                        <span class="text-blue-100" data-key="per_user_month">/user/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_everything_starter">Everything in Starter</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_safety_compliance">Safety & Compliance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_advanced_analytics">Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span data-key="feature_priority_support">Priority Support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-deep-blue py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-key="get_started">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-key="contact_title">
+                    Ready to Transform Your Workforce Management?
+                </h2>
+                <p class="text-xl text-gray-600" data-key="contact_subtitle">
+                    Get in touch with our team for a personalized demo
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl">
+                <form class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-key="form_name">Name</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-blue focus:border-transparent" data-key="form_name_placeholder" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-key="form_email">Email</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-blue focus:border-transparent" data-key="form_email_placeholder" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-key="form_company">Company</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-blue focus:border-transparent" data-key="form_company_placeholder" placeholder="Company Name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-key="form_team_size">Team Size</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-blue focus:border-transparent">
+                            <option data-key="team_size_1_10">1-10 workers</option>
+                            <option data-key="team_size_11_50">11-50 workers</option>
+                            <option data-key="team_size_51_200">51-200 workers</option>
+                            <option data-key="team_size_200_plus">200+ workers</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-key="form_message">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-blue focus:border-transparent" data-key="form_message_placeholder" placeholder="Tell us about your workforce management needs..."></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-deep-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-key="form_submit">
+                            Request Demo
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-deep-blue rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-lg">E</span>
+                        </div>
+                        <span class="text-2xl font-bold">Easiplus</span>
+                    </div>
+                    <p class="text-gray-300 max-w-md" data-key="footer_description">
+                        Empowering businesses to manage their on-site workforce with confidence and efficiency.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" data-key="footer_product">Product</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#features" class="hover:text-white transition-colors" data-key="nav_features">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors" data-key="nav_pricing">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-key="footer_security">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" data-key="footer_company">Company</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors" data-key="footer_about">About</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors" data-key="nav_contact">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-key="footer_support">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Easiplus. <span data-key="footer_rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Content Data Object
+        const contentData = {
+            en: {
+                // Navigation
+                nav_features: "Features",
+                nav_pricing: "Pricing",
+                nav_contact: "Contact",
+
+                // Hero Section
+                hero_headline: "Manage Your On-Site Workforce, Simply.",
+                hero_subtitle: "The B2B platfor
